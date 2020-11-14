@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.elec5620.commute.Dao.TimetableDao">
+
+    <resultMap id="timetableResultMap" type="com.elec5620.commute.pojo.Timetable">
+        <id column="timetable_Id" property="timetable_id" jdbcType="INTEGER"/>
+        <result column="fk_user_id" property="fk_user_id" jdbcType="INTEGER"/>
+        <result column="datetime" property="datetime" jdbcType="VARCHAR"/>
+        <result column="things" property="things" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="getTimetableByUserId" resultMap="timetableResultMap">
+        select * from commute.timetable where fk_user_id = #{fk_user_id}
+    </select>
+
+    <insert id="addEvents">
+        insert into commute.timetable (fk_user_id, datetime, things) VALUES (#{fk_user_id}, #{datetime}, #{things})
+    </insert>
+
+</mapper>

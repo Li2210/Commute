@@ -1,0 +1,28 @@
+{
+  "groups": [
+    {
+      "name": "commute.jwt",
+      "type": "com.elec5620.commute.Utils.JwtUtils",
+      "sourceType": "com.elec5620.commute.Utils.JwtUtils"
+    }
+  ],
+  "properties": [
+    {
+      "name": "commute.jwt.expire",
+      "type": "java.lang.Long",
+      "sourceType": "com.elec5620.commute.Utils.JwtUtils",
+      "defaultValue": 0
+    },
+    {
+      "name": "commute.jwt.header",
+      "type": "java.lang.String",
+      "sourceType": "com.elec5620.commute.Utils.JwtUtils"
+    },
+    {
+      "name": "commute.jwt.secret",
+      "type": "java.lang.String",
+      "sourceType": "com.elec5620.commute.Utils.JwtUtils"
+    }
+  ],
+  "hints": []
+}
